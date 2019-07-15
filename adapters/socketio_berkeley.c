@@ -361,7 +361,7 @@ static int wait_for_connection(SOCKET_IO_INSTANCE* socket_io_instance)
 
     if (retval != 1)
     {
-        LogError("Failure: select failure.");
+        LogError("Failure: select failure errno=%d.", errno);
         result = __FAILURE__;
     }
     else
